@@ -95,4 +95,4 @@ generateBtn.addEventListener("click", writePassword);
 
 //ISSUE different weights to arrays need to garauntee 
 
-//could add all arrays to one as sub array
+//could add all arrays to one as sub array gi

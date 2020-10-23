@@ -19,13 +19,15 @@ function generatePassword() {
   var useSpecial = confirm("Would you like your password to include numbers?");
   var useNumbers = confirm("Would you like your password to include special characters?");
   var totalCharUsed = prompt("Please specify a password length from 8 to 128 characters.");
-//If the user does not select a valid lenght input they should be prompted to do so
-  if(totalCharUsed >= 129 || totalCharUsed <= 7) 
-    alert("Please select");
-
-
-  alert("You have selected Lowercase:" + useLowercase + "Uppercase:" + useUppercase + "Special Characters:" + useSpecial + "Length:" + totalCharUsed);
-
+//If the user does not select a valid lenght input they should be prompted to do so and reset.
+  if(totalCharUsed >= 129 || totalCharUsed <= 7) {
+    alert("Input must be 8 to 128 characters long.");
+    return;
+  }
+  //User selects valid character length and is provided with confirmation of pw criteria selected
+  else {
+    alert("You have selected Lowercase:" + useLowercase + "Uppercase:" + useUppercase + "Special Characters:" + useSpecial + "Length:" + totalCharUsed);
+  }
   // if( !( totalCharUsed >= 8 || totalCharUsed <= 128)) {
   //   alert("Password length must be from 8 to 128 characters in length.");
   // }

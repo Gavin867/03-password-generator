@@ -14,12 +14,16 @@ var pwCharacters = {
 
 //click the function button
 function generatePassword() {
-  var useLowercase = confirm("Does your password include lowercase characters?");
-  var useUppercase = confirm("Does your password include uppercase characters?");
-  var useSpecial = confirm("Does your password include special characters?");
-  var useNumbers = confirm("Does your password include numbers?");
+  var useLowercase = confirm("Would you like your password to include lowercase characters?");
+  var useUppercase = confirm("Would you like your password to include uppercase characters?");
+  var useSpecial = confirm("Would you like password to include numbers?");
+  var useNumbers = confirm("Would you like your password to include special characters?");
   var totalCharUsed = prompt("Please specify a password length between 8 and 128 characters.");
-  
+}
+
+//   // Password length
+//   const passwordLength = prompt("asdfasdf")
+
 //   //IF NOT ( password >= 8 || password length <=128 )
 //   if( !(passwordLEngth >= 8 || passwordLength <= 128)) {
 //     //Then Alert to the user that they need to provide a correct length

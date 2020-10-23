@@ -10,7 +10,7 @@ var pwCharacters = {
   totalChar: [],
 }
 
-// console.log(pwCharacters);
+console.log(pwCharacters);
 
 //click the function button
 function generatePassword() {
@@ -19,7 +19,10 @@ function generatePassword() {
   var useSpecial = confirm("Would you like your password to include numbers?");
   var useNumbers = confirm("Would you like your password to include special characters?");
   var totalCharUsed = prompt("Please specify a password length from 8 to 128 characters.");
-//If the user does not select a valid lenght input they should be promptet to do so
+//If the user does not select a valid lenght input they should be prompted to do so
+  if(totalCharUsed >= 129 || totalCharUsed <= 7) 
+    alert("Please select");
+
 
   alert("You have selected Lowercase:" + useLowercase + "Uppercase:" + useUppercase + "Special Characters:" + useSpecial + "Length:" + totalCharUsed);
 

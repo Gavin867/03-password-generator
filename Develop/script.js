@@ -1,6 +1,7 @@
 // // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+//define a database of characters to use in the password
 var pwCharacters = {
   lowercase: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
   uppercase: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
@@ -9,16 +10,16 @@ var pwCharacters = {
   totalChar: [],
 }
 
-// console.log(pwCharacters)
+// console.log(pwCharacters);
 
-
-
-
-// function generatePassword() {
-
-//   // Password length
-//   const passwordLength = prompt("asdfasdf")
-
+//click the function button
+function generatePassword() {
+  var useLowercase = confirm("Does your password include lowercase characters?");
+  var useUppercase = confirm("Does your password include uppercase characters?");
+  var useSpecial = confirm("Does your password include special characters?");
+  var useNumbers = confirm("Does your password include numbers?");
+  var totalCharUsed = prompt("Please specify a password length between 8 and 128 characters.");
+  
 //   //IF NOT ( password >= 8 || password length <=128 )
 //   if( !(passwordLEngth >= 8 || passwordLength <= 128)) {
 //     //Then Alert to the user that they need to provide a correct length
@@ -73,16 +74,16 @@ var pwCharacters = {
 // }
 
 // // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-//   passwordText.value = password;
+  passwordText.value = password;
 
-// }
+}
 
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 
 // //ISSUE different weights to arrays need to garauntee 

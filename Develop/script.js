@@ -24,11 +24,16 @@ function generatePassword() {
   var useUppercase = confirm("Would you like your password to include uppercase characters?");
   var useSpecial = confirm("Would you like your password to include numbers?");
   var useNumbers = confirm("Would you like your password to include special characters?");
-//After all criteria has been selected use is given a summary of their selections
+  //After all criteria has been selected use is given a summary of their selections
   alert("You have selected Lowercase:" + useLowercase + "Uppercase:" + useUppercase + "Special Characters:" + useSpecial + "Length:" + totalCharUsed);
+
+  if
+
+  console.log(totalChar)
   
+  //The function takes the length input and uses it as the iteration value...
   
-  // //If the user selects lowercase option, lowercase array is activated...
+  // //If the user selects lowercase option, lowercase array is activated and an idex is chosen at random
   // if (useLowercase === true) {
 
   // }
@@ -42,12 +47,12 @@ function generatePassword() {
   // if (useSpecial === true) {
 
   // }
-
-  // //If the user selects lowercase option, lowercase array is activated...
-  // if (totalCharUsed === true) {
-
-  // }
 }
+
+
+//CONCACT ENTIRE POOL AND LOOP 'X' TIMES
+
+//DIVIDE CHARCTER LENGTH BY 4 AND RUN EACH LOOP THAT NUMBER OF TIMES
 
 // console.log(generatePassword)
 

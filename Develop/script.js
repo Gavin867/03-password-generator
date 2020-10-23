@@ -16,10 +16,21 @@ var pwCharacters = {
 function generatePassword() {
   var useLowercase = confirm("Would you like your password to include lowercase characters?");
   var useUppercase = confirm("Would you like your password to include uppercase characters?");
-  var useSpecial = confirm("Would you like password to include numbers?");
+  var useSpecial = confirm("Would you like your password to include numbers?");
   var useNumbers = confirm("Would you like your password to include special characters?");
   var totalCharUsed = prompt("Please specify a password length from 8 to 128 characters.");
+//If the user does not select a valid lenght input they should be promptet to do so
+
+  alert("You have selected Lowercase:" + useLowercase + "Uppercase:" + useUppercase + "Special Characters:" + useSpecial + "Length:" + totalCharUsed);
+
+  // if( !( totalCharUsed >= 8 || totalCharUsed <= 128)) {
+  //   alert("Password length must be from 8 to 128 characters in length.");
+  // }
+
+
 }
+
+// console.log(generatePassword)
 
 //   // Password length
 //   const passwordLength = prompt("asdfasdf")

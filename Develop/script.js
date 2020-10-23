@@ -18,7 +18,7 @@ function generatePassword() {
   var useUppercase = confirm("Would you like your password to include uppercase characters?");
   var useSpecial = confirm("Would you like password to include numbers?");
   var useNumbers = confirm("Would you like your password to include special characters?");
-  var totalCharUsed = prompt("Please specify a password length between 8 and 128 characters.");
+  var totalCharUsed = prompt("Please specify a password length from 8 to 128 characters.");
 }
 
 //   // Password length

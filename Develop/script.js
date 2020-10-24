@@ -9,9 +9,6 @@ var pwCharacters = {
   numbers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
 }
 
-
-// console.log(pwCharacters);
-
 //click the function button
 function generatePassword() {
   var totalChar = [];
@@ -24,6 +21,9 @@ function generatePassword() {
     }
 
   var useLowercase = confirm("Would you like your password to include lowercase characters?");
+    if(useLowercase === true) {
+      totalChar.push(lowercase);
+    }
 
   var useUppercase = confirm("Would you like your password to include uppercase characters?");
   
@@ -33,14 +33,25 @@ function generatePassword() {
   //After all criteria has been selected use is given a summary of their selections
   alert("You have selected Length:" + totalCharUsed + "Lowercase:" + useLowercase + "Uppercase:" + useUppercase + "Special Characters:" + useSpecial);
 
-  // console.log(totalCharUsed)
-  
-  //The function takes the length input and uses it as the iteration value...
-  
-  // //If the user selects lowercase option, lowercase array is activated and an idex is chosen at random
-  // if (useLowercase === true) {
+  console.log(totalChar)
+}
 
-  // }
+// // Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+
+
+ // //If the user selects lowercase option, the lowcase array is added into the totalChar array
+  
 
   // //If the user selects uppercase option, uppercase array is activated...
   // if (useUppercase === true) {
@@ -51,7 +62,6 @@ function generatePassword() {
   // if (useSpecial === true) {
 
   // }
-}
 
 // if(totalCharUsed >= 129 || totalCharUsed <= 7 || totalCharUsed !== Number)
 
@@ -116,18 +126,6 @@ function generatePassword() {
 
 
 // }
-
-// // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
 
 
 // //ISSUE different weights to arrays need to garauntee 

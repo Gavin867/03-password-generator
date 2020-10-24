@@ -7,22 +7,28 @@ var pwCharacters = {
   uppercase: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
   special: ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "{", "}", "[", "]", "|", "<", ">", ",", ".", "?", ";", ":"],
   numbers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-  totalChar: [],
 }
+
 
 // console.log(pwCharacters);
 
 //click the function button
 function generatePassword() {
-  var totalCharUsed = prompt("Please specify a password length (numbers only, 8 character minimum, 128 character maximum).");
+  var totalChar = [];
+
+  var totalCharUsed = parseInt(prompt("Please specify a password length (numbers only, 8 character minimum, 128 character maximum)."));
   //If the user does not select a valid lenght input they should be prompted to do so and reset.
-    if(totalCharUsed >= 129 || totalCharUsed <= 7 || totalCharUsed !== Number) {
+    if( !(totalCharUsed >= 8 || totalCharUsed <= 128)) {
       alert("Invalid entry. Password length must be a number 8 or greater, 128 or less.");
       return;
     }
+
   var useLowercase = confirm("Would you like your password to include lowercase characters?");
+
   var useUppercase = confirm("Would you like your password to include uppercase characters?");
+  
   var useSpecial = confirm("Would you like your password to include numbers?");
+
   var useNumbers = confirm("Would you like your password to include special characters?");
   //After all criteria has been selected use is given a summary of their selections
   alert("You have selected Length:" + totalCharUsed + "Lowercase:" + useLowercase + "Uppercase:" + useUppercase + "Special Characters:" + useSpecial);
@@ -47,6 +53,7 @@ function generatePassword() {
   // }
 }
 
+// if(totalCharUsed >= 129 || totalCharUsed <= 7 || totalCharUsed !== Number)
 
 //CONCACT ENTIRE POOL AND LOOP 'X' TIMES
 
@@ -58,12 +65,12 @@ function generatePassword() {
 //   const passwordLength = prompt("asdfasdf")
 
 //   //IF NOT ( password >= 8 || password length <=128 )
-//   if( !(passwordLEngth >= 8 || passwordLength <= 128)) {
-//     //Then Alert to the user that they need to provide a correct length
+//   if( !(passwordLength >= 8 || passwordLength <= 128)) {
+// //     //Then Alert to the user that they need to provide a correct length
 //     alert("Please select option within 8 and 128 characters.")
-//     //and exit function
+// //     //and exit function
 //     return;
-//   }
+  // }
 
 //   //DECLARE a new list of 'charactersUsed'
 //   var charactersUsed = [];

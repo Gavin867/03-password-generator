@@ -18,7 +18,7 @@ function generatePassword() {
 
   var totalCharUsed = parseInt(prompt("Please specify a password length (numbers only, 8 character minimum, 128 character maximum)."));
   //If the user does not select a valid lenght input they should be prompted to do so and reset.
-    if( !(totalCharUsed >= 8 || totalCharUsed <= 128)) {
+    if( !(totalCharUsed >= 8 && totalCharUsed <= 128)) {
       alert("Invalid entry. Password length must be a number 8 or greater, 128 or less.");
       return;
     }

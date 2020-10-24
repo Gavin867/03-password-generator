@@ -10,14 +10,14 @@ var pwCharacters = {
   totalChar: [],
 }
 
-console.log(pwCharacters);
+// console.log(pwCharacters);
 
 //click the function button
 function generatePassword() {
-  var totalCharUsed = prompt("Please specify a password length from 8 to 128 characters.");
+  var totalCharUsed = prompt("Please specify a password length (numbers only, 8 character minimum, 128 character maximum).");
   //If the user does not select a valid lenght input they should be prompted to do so and reset.
-    if(totalCharUsed >= 129 || totalCharUsed <= 7) {
-      alert("Input must be 8 to 128 characters long.");
+    if(totalCharUsed >= 129 || totalCharUsed <= 7 || totalCharUsed !== Number) {
+      alert("Invalid entry. Password length must be a number 8 or greater, 128 or less.");
       return;
     }
   var useLowercase = confirm("Would you like your password to include lowercase characters?");
@@ -25,11 +25,9 @@ function generatePassword() {
   var useSpecial = confirm("Would you like your password to include numbers?");
   var useNumbers = confirm("Would you like your password to include special characters?");
   //After all criteria has been selected use is given a summary of their selections
-  alert("You have selected Lowercase:" + useLowercase + "Uppercase:" + useUppercase + "Special Characters:" + useSpecial + "Length:" + totalCharUsed);
+  alert("You have selected Length:" + totalCharUsed + "Lowercase:" + useLowercase + "Uppercase:" + useUppercase + "Special Characters:" + useSpecial);
 
-  if
-
-  console.log(totalChar)
+  // console.log(totalCharUsed)
   
   //The function takes the length input and uses it as the iteration value...
   

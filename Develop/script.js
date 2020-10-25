@@ -22,7 +22,7 @@ function generatePassword() {
 
   var useLowercase = confirm("Would you like your password to include lowercase characters?");
     if(useLowercase === true) {
-      totalChar.push(lowercase);
+      totalChar.concat(pwCharacters.lowercase);
     }
 
   var useUppercase = confirm("Would you like your password to include uppercase characters?");

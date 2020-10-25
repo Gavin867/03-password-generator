@@ -30,7 +30,7 @@
 * The psuedocode comments also help clarify the purpose of each subsequent line of code.
 * The comments are the green lines of text beginning with "//".
 
-[image]
+<img >
 
 #### Data Types - String Value vs. Actual Numbers
 

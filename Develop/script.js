@@ -63,7 +63,7 @@ function generatePassword() {
 
   //Now that we have our pool filled with characters satisfying the user selected criteria, we must created a 'for' loop to randomly select values from it
   
-  //Before we can create our for loop, we must create an empty variable for our loop to add these values into
+  //Before we can create our for loop, we must create an empty variable for our loop to add these values into.
   var password = [];
 
   for (var i = 0; i <passwordLength; i++) {

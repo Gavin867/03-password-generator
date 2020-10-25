@@ -11,32 +11,52 @@ var passwordCharacters = {
 
 //click the function button
 function generatePassword() {
+  //This variable will serve as the pool of characters the function loop will select characters from.
   var characterPool = [];
 
+  //Ask the user how long the password will be. Utilize parsInt to ensure that string data is converted to number value.
   var passwordLength = parseInt(prompt("Please specify a password length (numbers only, 8 character minimum, 128 character maximum)."));
   //If the user does not select a valid lenght input they should be prompted to do so and reset.
     if( !(passwordLength >= 8 && passwordLength <= 128)) {
       alert("Invalid entry. Password length must be a number 8 or greater, 128 or less.");
       return;
     }
-
+  
+  //Ask the user if they would like to use lowercase letters.
   var useLowercase = confirm("Would you like your password to include lowercase characters?");
+  //If they are going to use lowercase letters then the concat function adds the lowercase are to the pool of characters to use.
     if(useLowercase === true) {
       characterPool = characterPool.concat(passwordCharacters.lowercase);
     }
 
+  //Ask the user if they would like to use uppercase letters.
   var useUppercase = confirm("Would you like your password to include uppercase characters?");
-  
-  var useSpecial = confirm("Would you like your password to include numbers?");
+  //If they are going to use uppercase letters then the concat function adds the uppercase are to the pool of characters to use.
+    if(useUppercase === true) {
+      characterPool = characterPool.concat(passwordCharacters.uppercase);
+    }
 
+  //Ask the user if they would like to use numbers.
+  var useSpecial = confirm("Would you like your password to include numbers?");
+  //If they are going to use numbers then the concat function adds the special are to the pool of characters to use.
+    if(useSpecial === true) {
+      characterPool = characterPool.concat(passwordCharacters.special);
+    }
+
+  //Ask the user if they would like to use special characters.
   var useNumbers = confirm("Would you like your password to include special characters?");
-  //After all criteria has been selected use is given a summary of their selections
+  //If they are going to use special characters then the concat function adds the lowercase are to the pool of characters to use.  
+    if(useNumbers === true) {
+      characterPool = characterPool.concat(passwordCharacters.numbers);
+    }
+
+  //After all criteria has been selected user is given a summary of their selections.
   alert("You have selected Length:" + passwordLength + "Lowercase:" + useLowercase + "Uppercase:" + useUppercase + "Special Characters:" + useSpecial);
 
   console.log(characterPool)
 }
 
-// // Write password to the #password input
+// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");

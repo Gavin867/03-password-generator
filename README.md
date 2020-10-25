@@ -28,7 +28,7 @@
 * 'Psuedo coding', as the the verb form goes, is the act of create a commented outline of the code that you intend to right.
 * This outline identifies and breaks down the the actions which need to be taken by the program to create the desired endstate.
 * The psuedocode comments also help clarify the purpose of each subsequent line of code.
-* The comments are the green lines of text beginning with "//"
+* The comments are the green lines of text beginning with "//".
 
 [image]
 

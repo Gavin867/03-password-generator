@@ -6,7 +6,7 @@ var passwordCharacters = {
   lowercase: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
   uppercase: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
   special: ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "{", "}", "[", "]", "|", "<", ">", ",", ".", "?", ";", ":", "~", ";", "/", "`", "'"],
-  numbers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  numbers: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
 }
 
 //click the function button
@@ -67,8 +67,8 @@ function generatePassword() {
   var password = [];
 
   for (var i = 0; i <passwordLength; i++) {
-    var randomPoolIndex = Math.floor(Math.random() * characterPool.length + 1);
-    password += characterPool.charAt(randomPoolIndex);
+    var selectedCharacter = Math.floor(Math.random() * characterPool.length);
+    password += selectedCharacter;
   }
 
   return password;

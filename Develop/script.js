@@ -26,7 +26,6 @@ function generatePassword() {
   
   //Ask the user if they would like to use lowercase letters.
   var useLowercase = confirm("Would you like your password to include lowercase characters?");
-
   //If they are going to use lowercase letters then the concat function adds the lowercase are to the pool of characters to use.
     if(useLowercase === true) {
       characterPool = characterPool.concat(passwordCharacters.lowercase);
@@ -34,7 +33,6 @@ function generatePassword() {
 
   //Ask the user if they would like to use uppercase letters.
   var useUppercase = confirm("Would you like your password to include uppercase characters?");
-
   //If they are going to use uppercase letters then the concat function adds the uppercase are to the pool of characters to use.
     if(useUppercase === true) {
       characterPool = characterPool.concat(passwordCharacters.uppercase);
@@ -42,7 +40,6 @@ function generatePassword() {
 
   //Ask the user if they would like to use special characters.
   var useNumbers = confirm("Would you like your password to include special characters?");
-
   //If they are going to use special characters then the concat function adds the lowercase are to the pool of characters to use.  
     if(useNumbers === true) {
       characterPool = characterPool.concat(passwordCharacters.numbers);
@@ -50,11 +47,16 @@ function generatePassword() {
 
   //Ask the user if they would like to use numbers.
   var useSpecial = confirm("Would you like your password to include numbers?");
-
   //If they are going to use numbers then the concat function adds the special are to the pool of characters to use.
     if(useSpecial === true) {
       characterPool = characterPool.concat(passwordCharacters.special);
     }
+
+  //If the user has not selected any criteria for their password they are given an alert telling them they need and are returned to the start.
+  if(useLowercase === false && useUppercase === false && useSpecial === false && useNumbers === false) {
+    alert("Invalid criteria. You must select at least one character type.");
+    return;
+  }
 
   //After all criteria has been selected user is given a summary of their selections.
   alert("You have selected Length:" + passwordLength + "Use Lowercase:" + useLowercase + "Use Uppercase:" + useUppercase + "Use Special Characters:" + useSpecial + "Use Numbers:" + useNumbers);

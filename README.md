@@ -15,6 +15,8 @@
         * User alerted and function is terminated if no values are selected
     * Display the randomly selected characters on the screen
 
+[https://github.com/Gavin867/password-generator/blob/main/Assets/03-javascript-homework-demo.png]
+
 ## Project Location
 
 * [GitHub Repo](https://github.com/Gavin867/password-generator)
@@ -30,7 +32,7 @@
 * The psuedocode comments also help clarify the purpose of each subsequent line of code.
 * The comments are the green lines of text beginning with "//".
 
-<img >
+[https://github.com/Gavin867/password-generator/blob/main/Assets/psuedo-code.jpg]
 
 #### Data Types - String Value vs. Actual Numbers
 
@@ -40,9 +42,9 @@
 * In the depiction we see below, there is a 'parseInt' function wrapping the prompt which allows the function to convert a string input into a number value.
 * This is important becase the number value associated with password length comes into play in our for loop on line 70, where it is used to determine the amount of iterations our loop runs to select password characters.
 
-[image of pareseInt on line 19]
+[https://github.com/Gavin867/password-generator/blob/main/Assets/line19-parseInt.jpg]
 
-[image of for loop in line 70]
+[https://github.com/Gavin867/password-generator/blob/main/Assets/line70-forloop.jpg]
 
 #### DOPE your Scope 
 
@@ -59,7 +61,9 @@
 * The use of [] brackets enables these arrays to be filled with values provided by other subfunctions.
 * The introduction of data to these blank arrays is achieved through the use of 'concat' and '+=" operators.
 
-[image]
+[https://github.com/Gavin867/password-generator/blob/main/Assets/line16-characterPool.jpg]
+
+[https://github.com/Gavin867/password-generator/blob/main/Assets/line67-password.jpg]
 
 #### Returning Index Values vs. Useful Information
 
@@ -67,10 +71,8 @@
 * I understood almost right away that what I was looking at was a return of index values from the 'characterPool' array that had been built from our user inputs.
 * The solution to this issue was to wrap the 'Math.floor/Math.random' functions of the loop with the array value 'characterPool'. 
 
-image
+[https://github.com/Gavin867/password-generator/blob/main/Assets/line70-characterPool-wrap.jpg]
 
 ## Parting Thoughts
 
 Throughout this process I made it a personal goal to limit the amount of time I spent looking at the work of my fellow dev classmates. I wanted to try and come up with a solved solution on my own that made sense to me and am very cautious about ensurinng my academic integrity cannot be questioned. Ultimately I did wind up crossreferencing some classmate examples with others I had seen on line. This ultimately helped me understand the 'for' loop components better and what I came up with is an almagamation of different elements of all those examples, placed together in such a way which fit best with my though processes. One major take away from this process is how diverse the pool of possible solutions is to a problem like the Password Generator. It will certaininly be fun to spend more time going through the shard work of others to see how a different mind approaches the code. In so doing, expand my understaing of javascript.
-
-[image]

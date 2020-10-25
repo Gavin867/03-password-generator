@@ -2,7 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 //define a database of characters to use in the password
-var pwCharacters = {
+var passwordCharacters = {
   lowercase: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
   uppercase: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
   special: ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "{", "}", "[", "]", "|", "<", ">", ",", ".", "?", ";", ":"],
@@ -11,18 +11,18 @@ var pwCharacters = {
 
 //click the function button
 function generatePassword() {
-  var totalChar = [];
+  var characterPool = [];
 
-  var totalCharUsed = parseInt(prompt("Please specify a password length (numbers only, 8 character minimum, 128 character maximum)."));
+  var passwordLength = parseInt(prompt("Please specify a password length (numbers only, 8 character minimum, 128 character maximum)."));
   //If the user does not select a valid lenght input they should be prompted to do so and reset.
-    if( !(totalCharUsed >= 8 && totalCharUsed <= 128)) {
+    if( !(passwordLength >= 8 && passwordLength <= 128)) {
       alert("Invalid entry. Password length must be a number 8 or greater, 128 or less.");
       return;
     }
 
   var useLowercase = confirm("Would you like your password to include lowercase characters?");
     if(useLowercase === true) {
-      totalChar.concat(pwCharacters.lowercase);
+      characterPool = characterPool.concat(passwordCharacters.lowercase);
     }
 
   var useUppercase = confirm("Would you like your password to include uppercase characters?");
@@ -31,9 +31,9 @@ function generatePassword() {
 
   var useNumbers = confirm("Would you like your password to include special characters?");
   //After all criteria has been selected use is given a summary of their selections
-  alert("You have selected Length:" + totalCharUsed + "Lowercase:" + useLowercase + "Uppercase:" + useUppercase + "Special Characters:" + useSpecial);
+  alert("You have selected Length:" + passwordLength + "Lowercase:" + useLowercase + "Uppercase:" + useUppercase + "Special Characters:" + useSpecial);
 
-  console.log(totalChar)
+  console.log(characterPool)
 }
 
 // // Write password to the #password input

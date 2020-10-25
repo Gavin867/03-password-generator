@@ -12,7 +12,7 @@ var passwordCharacters = {
 //click the function button
 function generatePassword() {
 
-  //This variable will serve as the pool of characters the function loop will select characters from.
+  //Create a variable will serve as the pool of characters the for loop will select characters from.
   var characterPool = [];
 
   //Ask the user how long the password will be. Utilize parsInt to ensure that string data is converted to number value.
@@ -61,8 +61,16 @@ function generatePassword() {
   //After all criteria has been selected user is given a summary of their selections.
   alert("You have selected the following password criteria: Length-" + passwordLength + "; Lowercase-" + useLowercase + "; Uppercase-" + useUppercase + "; Special Characters-" + useSpecial + "; Numbers-" + useNumbers);
 
-  console.log(characterPool)
+  //Now that we have our pool filled with characters satisfying the user selected criteria, we must created a 'for' loop to randomly select values from it
+  
+  //Before we can create our for loop, we must create an empty variable for our loop to add these values into
+  var password = [];
+
+ for (var i = 0; i <passwordLength; i++) {
+  var selectedCharacter = Math.floor(Math.random() * characterPool.length + 1);
+
 }
+
 
 // Write password to the #password input
 function writePassword() {

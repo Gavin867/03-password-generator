@@ -66,9 +66,12 @@ function generatePassword() {
   //Before we can create our for loop, we must create an empty variable for our loop to add these values into
   var password = [];
 
- for (var i = 0; i <passwordLength; i++) {
-  var selectedCharacter = Math.floor(Math.random() * characterPool.length + 1);
+  for (var i = 0; i <passwordLength; i++) {
+    var randomPoolIndex = Math.floor(Math.random() * characterPool.length + 1);
+    password += characterPool.charAt(randomPoolIndex);
+  }
 
+  return password;
 }
 
 

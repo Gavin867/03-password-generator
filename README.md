@@ -14,13 +14,14 @@
         * Numbers
         * User alerted and function is terminated if no values are selected
     * Display the randomly selected characters on the screen
-
-![Page example](https://github.com/Gavin867/03-password-generator/blob/main/Assets/Images/03-javascript-homework-demo.png)
-
+    
 ## Project Location
 
 * [GitHub Repo](https://github.com/Gavin867/03-password-generator)
 * [Published Site](https://gavin867.github.io/03-password-generator/)
+
+![Page example](https://github.com/Gavin867/03-password-generator/blob/main/Assets/Images/03-javascript-homework-demo.png)
+
 
 ## Lessons Learned
 

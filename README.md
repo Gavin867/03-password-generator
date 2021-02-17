@@ -1,4 +1,4 @@
-# Password Generator
+# The Password Generator
 
 ## Project Goals
 
@@ -17,10 +17,10 @@
     
 ## Project Location
 
-* [GitHub Repo](https://github.com/Gavin867/03-password-generator)
-* [Published Site](https://gavin867.github.io/03-password-generator/)
+* [GitHub Repo](https://github.com/Gavin867/The_Password_Generator)
+* [Published Site](https://gavin867.github.io/The_Password_Generator/)
 
-![Page example](https://github.com/Gavin867/03-password-generator/blob/main/Assets/Images/03-javascript-homework-demo.png)
+![Page example](https://github.com/Gavin867/The_Password_Generator/blob/main/Assets/Images/03-javascript-homework-demo.png)
 
 
 ## Lessons Learned
@@ -33,7 +33,7 @@
 * The psuedocode comments also help clarify the purpose of each subsequent line of code.
 * The comments are the green lines of text beginning with "//".
 
-![Psuedo Code Examples](https://github.com/Gavin867/03-password-generator/blob/main/Assets/Images/psuedo-code.jpg)
+![Psuedo Code Examples](https://github.com/Gavin867/The_Password_Generator/blob/main/Assets/Images/psuedo-code.jpg)
 
 #### Data Types - String Value vs. Actual Numbers
 
@@ -43,9 +43,9 @@
 * In the depiction we see below, there is a 'parseInt' function wrapping the prompt which allows the function to convert a string input into a number value.
 * This is important becase the number value associated with password length comes into play in our for loop on line 70, where it is used to determine the amount of iterations our loop runs to select password characters.
 
-![parseInt](https://github.com/Gavin867/03-password-generator/blob/main/Assets/Images/line19-parseInt.jpg)
+![parseInt](https://github.com/Gavin867/The_Password_Generator/blob/main/Assets/Images/line19-parseInt.jpg)
 
-![for loop](https://github.com/Gavin867/03-password-generator/blob/main/Assets/Images/line70-forloop.jpg)
+![for loop](https://github.com/Gavin867/The_Password_Generator/blob/main/Assets/Images/line70-forloop.jpg)
 
 #### DOPE your Scope 
 
@@ -62,9 +62,9 @@
 * The use of [] brackets enables these arrays to be filled with values provided by other subfunctions.
 * The introduction of data to these blank arrays is achieved through the use of 'concat' and '+=" operators.
 
-![characterPool](https://github.com/Gavin867/03-password-generator/blob/main/Assets/Images/line16-characterPool.jpg)
+![characterPool](https://github.com/Gavin867/The_Password_Generator/blob/main/Assets/Images/line16-characterPool.jpg)
 
-![password](https://github.com/Gavin867/03-password-generator/blob/main/Assets/Images/line67-password.jpg)
+![password](https://github.com/Gavin867/The_Password_Generator/blob/main/Assets/Images/line67-password.jpg)
 
 #### Returning Index Values vs. Useful Information
 
@@ -72,7 +72,7 @@
 * I understood almost right away that what I was looking at was a return of index values from the 'characterPool' array that had been built from our user inputs.
 * The solution to this issue was to wrap the 'Math.floor/Math.random' functions of the loop with the array value 'characterPool'. 
 
-![characterPool wrap](https://github.com/Gavin867/03-password-generator/blob/main/Assets/Images/line70-characterPool-wrap.jpg)
+![characterPool wrap](https://github.com/Gavin867/The_Password_Generator/blob/main/Assets/Images/line70-characterPool-wrap.jpg)
 
 ## Parting Thoughts
 
